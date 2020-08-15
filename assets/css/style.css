@@ -150,16 +150,7 @@ button {
 .texto > div > div {
     margin-top: 30px;
 }
-/* 
-.left > div ul {
-    display: none;
-    position: relative;
-    box-sizing: border-box;
-}
 
-.left > div:hover {
-    display: block;
-} */
 
 .left ul {
     display: none;
@@ -198,6 +189,35 @@ button {
     display: none;
 }
 
+.seta:hover ~ .menu-split {
+    display: grid !important;
+    z-index: 50000;
+    overflow: hidden;
+}
+
+.menu-split:hover{
+    display: grid !important;
+    overflow: hidden;
+    z-index: 50000;
+}
+
+.cloud-1, .software-1,
+.learn-1, .solution-1,
+.docs-1 {
+    border: 1px solid grey;
+}
+
+.cloud-1 ul, .software-1 ul,
+.learn-1 ul, .solution-1 ul,
+.docs-1 ul {
+    display: none;
+}
+
+.buttons-menu {
+    text-align: center;
+}
+
+
 @media screen and (max-width: 980px) { 
     .mongo {
         display: inline-block !important;
@@ -210,6 +230,14 @@ button {
         padding: 10px;
         z-index: 5000;
         cursor: pointer;
+    }
+
+    .menu-split {
+        z-index: 500000;
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        margin-top: 70px;
     }
 
     .seta i {
@@ -227,6 +255,50 @@ button {
 }
 
 .submenu-description {
-    font-size: 14px;
+    font-size: 14px !important;
     font-weight: 300;
+}
+
+@media screen and (max-width: 800px) { 
+    .meio {
+        width: 600px;
+        height: 600px;
+        margin-top: -75px;
+    }
+    
+    .meio3 h1{
+        font-size: 38px !important;
+    }
+    .texto p {
+        font-size: 15px;
+    }
+    
+    .submenu-description{
+        font-size: 9px !important;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .meio {
+        width: 600px;
+        height: 600px;
+        margin-top: -50px;
+        margin-left: -100px;
+    }
+    
+    .meio3 h1{
+        font-size: 35px !important;
+        line-height: unset;
+    }
+    .texto {
+        width: 300px;
+        height: 300px;
+    }
+    .texto p {
+        font-size: 20px;
+    }
+    
+    .submenu-description{
+        font-size: 9px !important;
+    }
 }
